@@ -35,7 +35,7 @@ if st.button("Submit Code"):
     else:
         st.warning("Please enter some code before submitting.")
 
-api_key_ant = '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'
+api_key_ant = st.secrets['api_key_ant']
 def evaluate_code(code):
     client = anthropic.Client(api_key=api_key_ant)
     response = client.completions.create(
